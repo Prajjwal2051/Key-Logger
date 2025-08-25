@@ -65,14 +65,6 @@ Repository: https://github.com/Prajjwal2051/Key-Logger.git
 3. **Logging:** Program captures keystrokes and saves to `keylog.txt` with timestamps
 4. **Stop:** Press **Escape** to stop and automatically email the log file
 
-## 📁 File Structure
-Key-Logger/
-├── keylogger.py # Main script
-├── keylog.txt # Generated log file
-├── README.md # Documentation
-└── requirements.txt # Dependencies
-
-
 ## 🔍 How It Works
 
 **Keystroke Capture:** Uses `pynput.keyboard.Listener` to monitor all keyboard events with timestamps
