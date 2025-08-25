@@ -66,4 +66,69 @@ Repository: https://github.com/Prajjwal2051/Key-Logger.git
 4. **Stop:** Press **Escape** to stop and automatically email the log file
 
 ## 📁 File Structure
+Key-Logger/
+├── keylogger.py # Main script
+├── keylog.txt # Generated log file
+├── README.md # Documentation
+└── requirements.txt # Dependencies
+
+
+## 🔍 How It Works
+
+**Keystroke Capture:** Uses `pynput.keyboard.Listener` to monitor all keyboard events with timestamps
+
+**Email Reporting:** Automatically detects SMTP settings by domain (Gmail: smtp.gmail.com:587, Outlook: smtp-mail.outlook.com:587, Yahoo: smtp.mail.yahoo.com:587), creates MIME message with log attachment, sends via TLS encryption
+
+## 🐛 Troubleshooting
+
+**"Authentication Failed":** Use App Password, not regular password
+
+**"No Module Named 'pynput'":** Run `pip install pynput`
+
+**"Permission Denied":** Run as Administrator (Windows) or with elevated privileges (Linux/macOS)
+
+**"Email Not Received":** Check spam folder, verify credentials and internet connection
+
+## 🔒 Security Considerations
+
+- **Log files contain sensitive information** - handle carefully and delete after use
+- Store App Passwords securely, never hardcode credentials
+- **Obtain proper authorization** before deployment
+- Follow local privacy and surveillance laws
+
+## 🚀 Future Enhancements
+
+**Version 2.0 (Planned):** Screenshot capture, audio recording, stealth mode, remote access, real-time dashboard
+
+**Version 3.0 (Vision):** Cross-platform GUI, AI behavior analysis, blockchain logging, enterprise features
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/NewFeature`
+3. Commit changes: `git commit -m 'Add NewFeature'`
+4. Push and open Pull Request
+
+## 📄 License
+
+Educational use only. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY. USE AT YOUR OWN RISK.
+
+## 📋 Quick Start
+
+**Prerequisites Checklist:**
+- [ ] Python 3.6+ installed
+- [ ] Repository cloned/downloaded
+- [ ] Dependency installed: `pip install pynput`
+- [ ] Email 2-Step Verification enabled
+- [ ] App Password generated
+- [ ] Proper authorization obtained
+
+**Quick Commands:** `git clone https://github.com/Prajjwal2051/Key-Logger.git` → `pip install pynput` → `python keylogger.py` → Press Escape to stop and send email
+
+## 🔗 Links
+
+- **Repository:** https://github.com/Prajjwal2051/Key-Logger.git
+- **Issues:** https://github.com/Prajjwal2051/Key-Logger/issues
+
+**Remember: Use this tool responsibly and ethically! 🛡️**
 
