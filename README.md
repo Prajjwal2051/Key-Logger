@@ -1,12 +1,12 @@
 # Python Keylogger with Email Reporting
 
-A Python-based keylogger that captures keyboard input and automatically sends logs via email. This project demonstrates cybersecurity concepts and network programming for **educational purposes only**.
+A Python-based keylogger that captures keyboard input and automatically sends logs via email. This project demonstrates cybersecurity concepts and network programming for educational purposes only.
 
----
+Repository: https://github.com/Prajjwal2051/Key-Logger.git
 
 ## ⚠️ IMPORTANT ETHICAL DISCLAIMER
 
-**This tool is for educational and research purposes only.**
+**This tool is for educational and research purposes only.** Users are solely responsible for compliance with applicable laws and regulations.
 
 ### ✅ Ethical Uses:
 - Learning cybersecurity concepts
@@ -23,10 +23,6 @@ A Python-based keylogger that captures keyboard input and automatically sends lo
 - Any illegal surveillance activities
 - Violating privacy laws or terms of service
 
-**Users are solely responsible for compliance with applicable laws and regulations.**
-
----
-
 ## 🚀 Features
 
 - **Real-time Keystroke Capture**: Records all keyboard input including special keys
@@ -36,8 +32,6 @@ A Python-based keylogger that captures keyboard input and automatically sends lo
 - **Secure Authentication**: Uses App Passwords for enhanced security
 - **Cross-Platform**: Works on Windows, macOS, and Linux
 - **Clean Logging**: Timestamps and organized log format
-
----
 
 ## 📋 Prerequisites
 
@@ -53,17 +47,24 @@ text
 
 **Note**: `smtplib`, `logging`, `email`, `os`, `re`, and `getpass` are built-in Python modules.
 
----
+## 📥 Download & Installation
 
-## 🔧 Installation
+### Method 1: Git Clone (Recommended)
+Clone the repository
+git clone https://github.com/Prajjwal2051/Key-Logger.git
 
-### 1. Clone or Download
-git clone [your-repository-url]
-cd keylogger-project
+Navigate to project directory
+cd Key-Logger
 
 text
 
-### 2. Create Virtual Environment (Recommended)
+### Method 2: Direct Download
+1. Go to https://github.com/Prajjwal2051/Key-Logger.git
+2. Click **"Code"** → **"Download ZIP"**
+3. Extract the ZIP file to your desired location
+4. Open terminal/command prompt in the extracted folder
+
+### Setup Virtual Environment (Recommended)
 Create virtual environment
 python3 -m venv keylogger_env
 
@@ -74,14 +75,10 @@ source keylogger_env/bin/activate
 On Windows:
 keylogger_env\Scripts\activate
 
-text
-
-### 3. Install Dependencies
+Install dependencies
 pip install pynput
 
 text
-
----
 
 ## 📧 Email Setup Guide
 
@@ -125,8 +122,6 @@ text
 4. Choose **Mail** as app type
 5. **Save the generated password**
 
----
-
 ## 🖥️ Usage
 
 ### 1. Run the Program
@@ -150,19 +145,15 @@ The program will prompt you to enter:
 - The program automatically emails the log file
 - Check the recipient's email for the keylog report
 
----
-
 ## 📁 File Structure
 
-keylogger-project/
+Key-Logger/
 ├── keylogger.py # Main keylogger script
 ├── keylog.txt # Generated log file
 ├── README.md # This file
 └── requirements.txt # Python dependencies
 
 text
-
----
 
 ## 🔍 How It Works
 
@@ -188,8 +179,6 @@ text
 - Validates email address format
 - Provides clear error messages for troubleshooting
 
----
-
 ## 🛠️ Configuration
 
 ### Email Provider Settings
@@ -203,8 +192,6 @@ The program automatically detects SMTP settings based on your email domain:
 
 ### Custom SMTP Configuration
 To use a different email provider, modify the `get_smtp_server()` function in the code.
-
----
 
 ## 🐛 Troubleshooting
 
@@ -238,8 +225,6 @@ text
 3. Test with a simple email first
 4. Ensure all dependencies are installed
 
----
-
 ## 🔒 Security Considerations
 
 ### Data Protection
@@ -260,7 +245,43 @@ text
 - Provide appropriate disclosure when monitoring
 - Maintain audit trails for authorized use
 
----
+## 🚀 Future Enhancements & Roadmap
+
+### Version 2.0 Features (Planned)
+- **Screenshot Capture**: Automatically take screenshots at intervals
+- **Audio Recording**: Record microphone input alongside keystrokes
+- **Stealth Mode**: Complete background operation with no console output
+- **Remote Access**: Access logs remotely via web interface
+- **Real-time Monitoring**: Live dashboard for real-time keystroke viewing
+
+### Version 2.1 Features (Planned)
+- **Machine Learning**: Detect suspicious typing patterns
+- **Multi-language Support**: Support for different keyboard layouts
+- **Cloud Storage**: Direct upload to cloud storage services (Google Drive, Dropbox)
+- **Mobile App**: Companion mobile app for remote monitoring
+- **Advanced Encryption**: End-to-end encryption for all communications
+
+### Version 3.0 Features (Future Vision)
+- **Cross-platform GUI**: Native desktop application for all platforms
+- **Network Monitoring**: Monitor network traffic alongside keystrokes
+- **Behavioral Analysis**: AI-powered user behavior analysis
+- **Compliance Tools**: Built-in tools for legal compliance and audit trails
+- **Plugin Architecture**: Extensible plugin system for custom features
+
+### Advanced Features Under Development
+- **Keylogger Detection**: Tools to detect and prevent unauthorized keyloggers
+- **Forensic Analysis**: Advanced analysis tools for digital forensics
+- **Enterprise Dashboard**: Centralized monitoring for multiple systems
+- **API Integration**: REST API for third-party integrations
+- **Blockchain Logging**: Immutable audit trails using blockchain technology
+
+### Contribution Opportunities
+Want to contribute to future development? Here are areas where help is needed:
+- **Security Research**: Improving detection evasion techniques
+- **Cross-platform Testing**: Testing on different operating systems
+- **Performance Optimization**: Making the keylogger more efficient
+- **Documentation**: Improving user guides and technical documentation
+- **UI/UX Design**: Designing user-friendly interfaces
 
 ## 📚 Educational Resources
 
@@ -279,7 +300,10 @@ This project demonstrates:
 - [Email Security Best Practices](https://owasp.org/www-community/controls/Email_Security)
 - [Cybersecurity Ethics Guidelines](https://www.acm.org/code-of-ethics)
 
----
+### Related Projects
+- [Python Network Scanner](https://github.com/example/network-scanner)
+- [Password Strength Analyzer](https://github.com/example/password-analyzer)
+- [System Monitoring Tools](https://github.com/example/system-monitor)
 
 ## 🤝 Contributing
 
@@ -289,12 +313,18 @@ This project demonstrates:
 3. Document new features clearly
 4. Maintain compatibility with major email providers
 
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
 ### Reporting Issues
 - Provide detailed error messages
 - Include system information (OS, Python version)
 - Describe steps to reproduce the issue
-
----
+- Check existing issues before creating new ones
 
 ## 📄 License
 
@@ -303,32 +333,30 @@ This project is for educational purposes only. Users are responsible for complia
 ### Disclaimer
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. USE AT YOUR OWN RISK.
 
----
-
 ## 📞 Support
 
 For educational questions or technical issues:
 1. Check the troubleshooting section
 2. Review the setup guide carefully
 3. Ensure proper email configuration
+4. Create an issue on GitHub with detailed information
 
 **Remember**: Use this tool responsibly and ethically! 🛡️
-
----
 
 ## 🏷️ Version History
 
 - **v1.0**: Initial release with basic keylogging and email functionality
 - **v1.1**: Added multi-provider email support and improved error handling
 - **v1.2**: Enhanced security with App Password support and input validation
-
----
+- **v1.3**: Added download instructions and future roadmap
+- **v2.0**: (Coming Soon) Screenshot capture and stealth mode
 
 ## 📋 Quick Start Checklist
 
 Before running the keylogger, make sure you have:
 
 - [ ] Python 3.6+ installed
+- [ ] Downloaded/cloned the repository
 - [ ] Installed pynput: `pip install pynput`
 - [ ] Set up 2-Step Verification on your email account
 - [ ] Generated App Password for your email provider
@@ -337,6 +365,9 @@ Before running the keylogger, make sure you have:
 - [ ] Obtained proper authorization for monitoring
 
 ### Quick Commands
+Clone repository
+git clone https://github.com/Prajjwal2051/Key-Logger.git
+
 Install dependencies
 pip install pynput
 
@@ -347,6 +378,11 @@ Stop logging and send email
 Press Escape key while program is running
 text
 
----
+## 🔗 Useful Links
+
+- **Repository**: https://github.com/Prajjwal2051/Key-Logger.git
+- **Issues**: https://github.com/Prajjwal2051/Key-Logger/issues
+- **Releases**: https://github.com/Prajjwal2051/Key-Logger/releases
+- **Wiki**: https://github.com/Prajjwal2051/Key-Logger/wiki
 
 *This README provides comprehensive guidance for educational use of this keylogger project. Always prioritize ethical considerations and legal compliance.*
