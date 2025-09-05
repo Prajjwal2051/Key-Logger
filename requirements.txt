@@ -1,8 +1,9 @@
 # Python Keylogger with Email Reporting - Dependencies
 # Repository: https://github.com/Prajjwal2051/Key-Logger.git
 
-# Core dependency
+# Core dependencies
 pynput>=1.7.0
+tk>=0.1.0        # GUI library (usually comes with Python)
 
 # Optional future enhancements (commented out for now)
 # pillow>=8.0.0          # For screenshot capture
